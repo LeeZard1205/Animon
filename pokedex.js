@@ -10,7 +10,12 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0")
     aniArray = data.results;
     for (let i = 0; i < aniArray.length; i++) {
       let li = document.createElement("li");
-      li.innerText = aniArray[i].name;
+      li.innerText = `${aniArray[i].name
+        .substring(0, 1)
+        .toUpperCase()}${aniArray[i].name.substring(
+        1,
+        aniArray[i].name.length
+      )}`;
       li.id = `li${i}`;
       li.className = "listEle";
       list.appendChild(li);
