@@ -83,7 +83,7 @@ search.addEventListener("keypress", function (event) {
         name.innerText = `${data.name
           .substring(0, 1)
           .toUpperCase()}${data.name.substring(1, data.name.length)}`;
-        weight.innerText = `${data.weight}lbs`;
+        weight.innerText = `${data.weight / 10}kg`;
         height.innerText = `${data.height / 10}m`;
         for (let i = 0; i < aniArray.length; i++) {
           if (aniArray[i].name.toUpperCase() == search.value.toUpperCase()) {
