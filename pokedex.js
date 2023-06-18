@@ -73,7 +73,7 @@ search.addEventListener("keypress", function (event) {
   if (event.key === "Enter" && test == 1) {
     event.preventDefault();
     list.style.display = "none";
-    fetch(`https://pokeapi.co/api/v2/pokemon/${search.value}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${search.value.toLowerCase()}`)
       .then(function (res) {
         return res.json();
       })
